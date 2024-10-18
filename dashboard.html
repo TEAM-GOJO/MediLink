@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLink Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #5b9bd5;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .notifications, .chat {
+            width: 45%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .notifications h3, .chat h3 {
+            color: #333;
+        }
+        .notification-item, .chat-message {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .chat-message {
+            display: flex;
+            justify-content: space-between;
+        }
+        .chat-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .send-btn {
+            padding: 10px;
+            background-color: #5b9bd5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 4px;
+        }
+        .send-btn:hover {
+            background-color: #4a86c5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Welcome to MediLink Dashboard
+    </div>
+
+    <div class="container">
+        <!-- Notifications Section -->
+        <div class="notifications">
+            <h3>Notifications</h3>
+            <div class="notification-item">
+                Reminder: Your annual check-up is scheduled for November 20th.
+            </div>
+            <div class="notification-item">
+                Lab results for your recent blood test are available.
+            </div>
+            <div class="notification-item">
+                Flu shots are now available at your local clinic.
+            </div>
+        </div>
+
+        <!-- Fake Chat Section -->
+        <div class="chat">
+            <h3>Chat with Healthcare Specialist</h3>
+            <div class="chat-message">
+                <span>Dr. Smith: Please follow up with me next week.</span>
+            </div>
+            <div class="chat-message">
+                <span>You: Thank you, Doctor. I will!</span>
+            </div>
+            <input type="text" class="chat-input" placeholder="Type a message..." />
+            <button class="send-btn">Send</button>
+        </div>
+    </div>
+</body>
+</html>
