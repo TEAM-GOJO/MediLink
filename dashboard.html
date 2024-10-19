@@ -21,16 +21,18 @@
         .container {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             margin: 20px;
         }
-        .notifications, .chat {
+        .notifications, .chat, .map {
             width: 45%;
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
-        .notifications h3, .chat h3 {
+        .notifications h3, .chat h3, .map h3 {
             color: #333;
         }
         .notification-item, .chat-message {
@@ -61,6 +63,12 @@
         .send-btn:hover {
             background-color: #4a86c5;
         }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -81,6 +89,9 @@
             <div class="notification-item">
                 Flu shots are now available at your local clinic.
             </div>
+            <div class="notification-item">
+                You have been evaluated to be at risk for XYZ virus because of your location.
+            </div>
         </div>
 
         <!-- Fake Chat Section -->
@@ -94,6 +105,12 @@
             </div>
             <input type="text" class="chat-input" placeholder="Type a message..." />
             <button class="send-btn">Send</button>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map">
+            <h3>Your Location: San Diego</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107108.50823428915!2d-117.29374615!3d32.824817699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530f4a0c3763%3A0x6d45e52bca1e0fe3!2sSan%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1697640123456!5m2!1sen!2sus" allowfullscreen=""></iframe>
         </div>
     </div>
 </body>
